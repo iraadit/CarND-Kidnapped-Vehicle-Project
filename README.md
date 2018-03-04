@@ -1,5 +1,12 @@
-# Overview
-This repository contains all the code needed to complete the final project for the Localization course in Udacity's Self-Driving Car Nanodegree.
+## Kidnapped Vehicle Project / Particle Filter for Localization
+
+This repository contains my C++ implementation of a 2 dimensional Particle Filter to localize a vehicle kidnapped in a closed environment.  It is the final project of the Localization course in Udacity's Self-Driving Car Nanodegree.
+
+[Original repo](https://github.com/udacity/CarND-Kidnapped-Vehicle-Project)
+
+The description below comes from the original repo.
+
+---
 
 #### Submission
 All you will submit is your completed version of `particle_filter.cpp`, which is located in the `src` directory. You should probably do a `git pull` before submitting to verify that your project passes the most up-to-date version of the grading code (there are some parameters in `src/main.cpp` which govern the requirements on accuracy and run time.)
@@ -34,7 +41,7 @@ Note that the programs that need to be written to accomplish the project are src
 
 The program main.cpp has already been filled out, but feel free to modify it.
 
-Here is the main protcol that main.cpp uses for uWebSocketIO in communicating with the simulator.
+Here is the main protocol that main.cpp uses for uWebSocketIO in communicating with the simulator.
 
 INPUT: values provided by the simulator to the c++ program
 
@@ -138,9 +145,6 @@ The things the grading code is looking for are:
 1. **Accuracy**: your particle filter should localize vehicle position and yaw to within the values specified in the parameters `max_translation_error` and `max_yaw_error` in `src/main.cpp`.
 
 2. **Performance**: your particle filter should complete execution within the time of 100 seconds.
-
-## How to write a README
-A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
 
 
 
