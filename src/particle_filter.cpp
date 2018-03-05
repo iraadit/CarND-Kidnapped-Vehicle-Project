@@ -161,7 +161,7 @@ void ParticleFilter::updateWeights(double sensor_range, double std_landmark[],
 				LandmarkObs trans_observation;
 				trans_observation.x = p_x + o_x * cos(p_t) - o_y * sin(p_t);
 				trans_observation.y = p_y + o_x * sin(p_t) + o_y * cos(p_t);
-				trans_observed_landmarks.push_back(trans_observation);
+				trans_observed_landmarks.push_back(std::move(trans_observation));
 		}
 
 		// Associate the observed and predicted landmarks
@@ -225,7 +225,7 @@ void ParticleFilter::resample() {
 		int index = weight_distribution(gen);
 		resampled_particles.push_back(particles[index]);
 	}
-	particles = resampled_particles; // TODO: std::move ?
+	particles = std::move(resampled_particles);
 }
 
 Particle ParticleFilter::SetAssociations(Particle& particle, const std::vector<int>& associations,
