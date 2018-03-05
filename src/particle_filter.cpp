@@ -82,11 +82,6 @@ void ParticleFilter::prediction(double delta_t, double std_pos[], double velocit
 	normal_distribution<double> dist_y(0.0, std_y);
 	normal_distribution<double> dist_theta(0.0, std_theta);
 
-	if (velocity < 0.0){
-		std::cerr << "Velocity is negative" << std::endl;
-		return;
-	}
-
 	for(unsigned i = 0; i < num_particles; ++i){
 		Particle particle = particles[i];
 		double x = particle.x;
